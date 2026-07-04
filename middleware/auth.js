@@ -7,7 +7,6 @@ module.exports = function (req, res, next) {
     return res.status(401).json({ message: "No token provided" });
   }
 
-  // Remove Bearer if present
   if (authHeader.startsWith("Bearer ")) {
     authHeader = authHeader.split(" ")[1];
   }
